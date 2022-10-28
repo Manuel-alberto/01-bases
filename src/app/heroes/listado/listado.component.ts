@@ -2,14 +2,17 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-listado',
-  templateUrl: './listado.component.html',
-  styleUrls: ['./listado.component.css']
+  templateUrl: './listado.component.html'
+  //styleUrls: ['./listado.component.css']
 })
-export class ListadoComponent implements OnInit {
+export class ListadoComponent{
 
-  constructor() { }
+  heroes: string[] = ['Spiderman', 'Iron Man', 'Thor']
+  heroe: string = '';
 
-  ngOnInit(): void {
+  borrarHeroe(){
+    
+    this.heroe =this.heroes.shift() || '';
   }
 
 }
